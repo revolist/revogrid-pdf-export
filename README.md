@@ -1,6 +1,10 @@
-# RevoGrid PDF Export
+<h1 align="center">RevoGrid PDF Export</h1>
 
-Export [RevoGrid](https://rv-grid.com/) data to clean, shareable PDF files with a small browser-side plugin powered by [pdfmake](https://pdfmake.github.io/docs/).
+<p align="center">
+  Export <a href="https://rv-grid.com/">RevoGrid</a> data to clean, shareable PDF files with a small browser-side plugin powered by <a href="https://pdfmake.github.io/docs/">pdfmake</a>.
+</p>
+
+![RevoGrid PDF Export preview](assets/preview.png)
 
 [`@revolist/revogrid-pdf-export`](https://www.npmjs.com/package/@revolist/revogrid-pdf-export) is built for teams that need a practical PDF export button without bringing in a heavy reporting stack. It reads visible [RevoGrid](https://github.com/revolist/revogrid) data, preserves column headers, respects trimmed or filtered rows, and creates a simple [pdfmake document definition](https://pdfmake.github.io/docs/0.1/document-definition-object/) that is ready to download, preview, or customize.
 
@@ -35,17 +39,6 @@ await pdf?.exportPdf({
   title: 'Orders',
 });
 ```
-
-## Demo
-
-The package includes a vanilla [RevoGrid](https://rv-grid.com/) demo with 1,000 rows, served by [Vite](https://vite.dev/):
-
-```sh
-npm install
-npm run dev
-```
-
-Open the local Vite URL and click **Export PDF**.
 
 ## API
 

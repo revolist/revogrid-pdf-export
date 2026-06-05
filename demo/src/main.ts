@@ -44,6 +44,7 @@ await defineCustomElements();
 
 if (grid) {
   grid.columns = columns;
+  grid.hideAttribution = true;
   grid.source = source;
   grid.plugins = [ExportPdfPlugin];
 }
