@@ -2,7 +2,7 @@
 
 Export RevoGrid data to clean, shareable PDF files with a small browser-side plugin powered by pdfmake.
 
-`@revolist/revogrid-pdf` is built for teams that need a practical PDF export button without bringing in a heavy reporting stack. It reads visible RevoGrid data, preserves column headers, respects trimmed or filtered rows, and creates a simple table document that is ready to download, preview, or customize.
+`@revolist/revogrid-pdf-export` is built for teams that need a practical PDF export button without bringing in a heavy reporting stack. It reads visible RevoGrid data, preserves column headers, respects trimmed or filtered rows, and creates a simple table document that is ready to download, preview, or customize.
 
 ## Why Use It
 
@@ -17,13 +17,13 @@ Export RevoGrid data to clean, shareable PDF files with a small browser-side plu
 ## Install
 
 ```sh
-npm install @revolist/revogrid-pdf
+npm install @revolist/revogrid-pdf-export
 ```
 
 ## Quick Start
 
 ```ts
-import { ExportPdfPlugin } from '@revolist/revogrid-pdf';
+import { ExportPdfPlugin } from '@revolist/revogrid-pdf-export';
 
 grid.plugins = [ExportPdfPlugin];
 

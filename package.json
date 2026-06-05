@@ -1,13 +1,13 @@
 {
-  "name": "@revolist/revogrid-pdf",
+  "name": "@revolist/revogrid-pdf-export",
   "version": "1.0.0",
   "description": "Lightweight pdfmake export plugin for RevoGrid",
   "license": "MIT",
   "author": "revolist",
-  "homepage": "https://github.com/revolist/revogrid-pdf#readme",
+  "homepage": "https://github.com/revolist/revogrid-pdf-export#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/revolist/revogrid-pdf.git"
+    "url": "git+https://github.com/revolist/revogrid-pdf-export.git"
   },
   "bugs": {
     "url": "https://github.com/revolist/revogrid/issues"
@@ -29,14 +29,14 @@
   ],
   "type": "module",
   "sideEffects": false,
-  "main": "./dist/revogrid-pdf.umd.cjs",
-  "module": "./dist/revogrid-pdf.js",
+  "main": "./dist/revogrid-pdf-export.umd.cjs",
+  "module": "./dist/revogrid-pdf-export.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/revogrid-pdf.js",
-      "require": "./dist/revogrid-pdf.umd.cjs"
+      "import": "./dist/revogrid-pdf-export.js",
+      "require": "./dist/revogrid-pdf-export.umd.cjs"
     }
   },
   "files": [

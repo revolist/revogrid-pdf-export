@@ -10,7 +10,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'lib/index.ts'),
       name: 'RevogridPdf',
-      fileName: 'revogrid-pdf',
+      fileName: 'revogrid-pdf-export',
     },
     rollupOptions: {
       external: [
