@@ -1,0 +1,66 @@
+{
+  "name": "@revolist/revogrid-pdf",
+  "version": "1.0.0",
+  "description": "Lightweight pdfmake export plugin for RevoGrid",
+  "license": "MIT",
+  "author": "revolist",
+  "homepage": "https://github.com/revolist/revogrid-pdf#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revolist/revogrid-pdf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/revolist/revogrid/issues"
+  },
+  "keywords": [
+    "data-grid",
+    "datagrid",
+    "data-table",
+    "table",
+    "grid",
+    "pdf-export",
+    "export-to-pdf",
+    "pdf",
+    "pdfmake",
+    "reporting",
+    "javascript",
+    "revogrid",
+    "export"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/revogrid-pdf.umd.cjs",
+  "module": "./dist/revogrid-pdf.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/revogrid-pdf.js",
+      "require": "./dist/revogrid-pdf.umd.cjs"
+    }
+  },
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "test": "vitest run",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@revolist/revogrid": "^4.23.8",
+    "pdfmake": "^0.3.9"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "@types/pdfmake": "^0.3.3",
+    "typescript": "^5.5.4",
+    "vite": "^8.0.16",
+    "vite-plugin-dts": "^5.0.2",
+    "vitest": "^4.1.8"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
