@@ -1,4 +1,5 @@
 import type { Content, TableCell, TDocumentDefinitions } from 'pdfmake/interfaces';
+import { getGroupingName, GROUP_DEPTH, isGrouping } from '@revolist/revogrid';
 import type { ExportPdfOptions, PdfCellValue, PdfTableData, ResolvedExportPdfOptions } from './types';
 
 export const DEFAULT_PDF_OPTIONS: ResolvedExportPdfOptions = {
@@ -52,6 +53,11 @@ export function createPdfDocumentDefinition(
         bold: true,
         fillColor: '#eeeeee',
       },
+      groupRow: {
+        bold: true,
+        fillColor: '#e8eef6',
+        color: '#24364b',
+      },
     },
     defaultStyle: {
       fontSize: 9,
@@ -75,6 +81,19 @@ export function createPdfTableBody(
   });
 
   rows.forEach(row => {
+    if (isGrouping(row)) {
+      const depth = Math.max(0, Number(row[GROUP_DEPTH]) || 0);
+      body.push([
+        {
+          text: stringifyPdfCell(getGroupingName(row)),
+          colSpan: Math.max(1, data.props.length),
+          style: 'groupRow',
+          margin: [depth * 12, 0, 0, 0],
+        },
+        ...Array.from({ length: Math.max(0, data.props.length - 1) }, () => ''),
+      ]);
+      return;
+    }
     body.push(data.props.map(prop => stringifyPdfCell(row[prop])));
   });
 
